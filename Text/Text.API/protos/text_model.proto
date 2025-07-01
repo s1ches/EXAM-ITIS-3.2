@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option csharp_namespace = "Text.API";
+
+import "google/protobuf/timestamp.proto";
+
+package text;
+
+message TextModel{
+  string text = 1;
+  google.protobuf.Timestamp Date = 2;
+}
