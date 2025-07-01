@@ -31,7 +31,9 @@ public class BaseProtobufConsumer<TMessage>(IConfiguration configuration, ILogge
 
             try
             {
-                var result = consumer.Consume(cancellationToken);
+                // Если не использовать Task.Run - приложение не запускается, а просто встаёт на моменте Consume
+                // Более изящное решение - вынести HostedService в отдельное dotnet приложение
+                var result = await Task.Run(() => consumer.Consume(cancellationToken), cancellationToken);
 
                 if (result is null)
                     continue;
