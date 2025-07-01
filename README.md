@@ -14,5 +14,33 @@ graphql + kafka. У вас должен крутиться сервис кафк
 
 RUN DOCKER COMPOSE, RUN! 
 
+Затем в браузере: `http://localhost:5112/graphql`
+
+### Запроосы для тестирования:
+
+Добавить запись:
+
+```graphql
+mutation {
+  addText(text: "t0")
+}
+```
+
+Получить записи:
+
+```graphql
+query {
+  texts {
+    totalCount
+    items {
+      content
+      createdAt
+      id
+    }
+  }
+```
+
+
+
 
 
