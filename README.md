@@ -40,7 +40,6 @@ query {
   }
 ```
 
+### Proof того, что всё работает:
 
-
-
-
+<img width="3433" alt="image" src="https://github.com/user-attachments/assets/e4fc3a62-85da-4f4a-a095-54db1ce8928d" />
